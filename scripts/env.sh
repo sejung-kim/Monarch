@@ -6,11 +6,11 @@ if [ ! -d $PWD/fuzz-config ]; then
     exit
 fi
 
-# Install go
+# Install go 1.24.3 for openai-go
 mkdir go-env
 pushd go-env
-wget --no-check-certificate https://dl.google.com/go/go1.17.6.linux-amd64.tar.gz
-tar -xf go1.17.6.linux-amd64.tar.gz
+wget --no-check-certificate https://dl.google.com/go/go1.24.3.linux-amd64.tar.gz
+tar -xf go1.24.3.linux-amd64.tar.gz
 GOROOT=`pwd`/go
 GOPATH=`pwd`/gopath
 mkdir $GOPATH
